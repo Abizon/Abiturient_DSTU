@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.dstu.myapplication.R;
 import com.dstu.myapplication.models.News;
@@ -71,6 +72,7 @@ public class NewsListAdapter extends BaseAdapter {
         itemHolder.date.setText(news.getTime_create());
         itemHolder.date2.setText(news.getTime_last_modify());
         itemHolder.text.setText(news.getDescription());
+        Toast.makeText(context,"Работает",Toast.LENGTH_SHORT).show();
 
 
         return view;
