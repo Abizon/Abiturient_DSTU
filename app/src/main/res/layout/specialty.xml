@@ -24,25 +24,24 @@
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
                 android:layout_below="@+id/card_date"
                 android:layout_marginBottom="5dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
+                android:background="@drawable/text_bloks"
                 android:text="Код направления" />
 
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/card_text"
-                android:layout_alignStart="@+id/card_text"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
                 android:layout_below="@+id/card_text"
                 android:layout_marginBottom="5dp"
-                android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
+                android:background="@drawable/text_bloks"
                 android:text="Форма обучения" />
 
             <TextView
@@ -52,6 +51,9 @@
                 android:layout_alignLeft="@+id/textView9"
                 android:layout_alignParentTop="true"
                 android:layout_alignStart="@+id/textView9"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/text_bloks"
                 android:text="Название направления" />
 
             <TextView
@@ -60,35 +62,36 @@
                 android:layout_height="wrap_content"
 
                 android:layout_alignLeft="@+id/textView9"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
                 android:layout_alignStart="@+id/textView9"
                 android:layout_below="@+id/textView9"
                 android:layout_marginBottom="5dp"
-                android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
+                android:background="@drawable/text_bloks"
                 android:text="Квалификация" />
 
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/textView8"
-                android:layout_alignStart="@+id/textView8"
                 android:layout_below="@+id/textView8"
+                android:layout_centerHorizontal="true"
                 android:layout_marginBottom="5dp"
-                android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
+                android:background="@drawable/text_bloks"
                 android:text="Срок обучения" />
 
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/textView10"
-                android:layout_alignStart="@+id/textView10"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
                 android:layout_below="@+id/textView10"
                 android:layout_marginBottom="5dp"
-                android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
+                android:background="@drawable/text_bloks"
                 android:text="Вступительные экзамены" />
 
 

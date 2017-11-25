@@ -61,8 +61,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="109dp"
-        android:textColor="#aff550"
-        android:background="@drawable/text_bloks"
+        android:background="@drawable/rounded_button3"
         android:text="Отправить" />
 
 </RelativeLayout
