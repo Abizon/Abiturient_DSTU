@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         //переизбыток иконок в toolbare
-        Drawable drawable = ContextCompat.getDrawable(getApplicationContext(),R.drawable.ic_settings_black_18dp);
-        toolbar.setOverflowIcon(drawable);
+        //Drawable drawable = ContextCompat.getDrawable(getApplicationContext(),R.drawable.ic_settings_black_18dp);
+        //toolbar.setOverflowIcon(drawable);
 
         fragmentSelector(0);
 
