@@ -7,23 +7,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.dstu.myapplication.R;
-import com.dstu.myapplication.adapters.IventListAdapter;
-import com.dstu.myapplication.adapters.NewsListAdapter;
+import com.dstu.myapplication.adapters.EventListAdapter;
 import com.dstu.myapplication.dstu.ConfigRetrofit;
 import com.dstu.myapplication.dstu.Requests;
 import com.dstu.myapplication.models.Event;
-import com.dstu.myapplication.models.News;
 
 import retrofit.Callback;
 import retrofit.Response;
 import retrofit.Retrofit;
 
-public class IventFragment extends Fragment implements Callback<Event.Array> {
+public class EventFragment extends Fragment implements Callback<Event.Array> {
     ListView recyclerView;
-    IventListAdapter iventListAdapter;
+    EventListAdapter eventListAdapter;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -42,8 +39,8 @@ public class IventFragment extends Fragment implements Callback<Event.Array> {
     }
     @Override
     public void onResponse(Response<Event.Array> response, Retrofit retrofit) {
-        iventListAdapter = new IventListAdapter(this.getContext(), response.body().getEvents());
-        recyclerView.setAdapter(iventListAdapter);
+        eventListAdapter = new EventListAdapter(this.getContext(), response.body().getEvents());
+        recyclerView.setAdapter(eventListAdapter);
     }
 
     @Override

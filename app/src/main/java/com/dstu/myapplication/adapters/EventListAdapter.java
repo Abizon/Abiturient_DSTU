@@ -6,24 +6,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dstu.myapplication.R;
 import com.dstu.myapplication.models.Event;
-import com.dstu.myapplication.models.News;
 
 import java.util.ArrayList;
 
-public class IventListAdapter extends BaseAdapter {
+public class EventListAdapter extends BaseAdapter {
 
     Context context;
     ArrayList<Event> events;
 
-    class IventItemHolder{
+    class EventItemHolder{
         TextView title, date, text, date2;
 
-        public IventItemHolder(View view){
+        public EventItemHolder(View view){
             title = (TextView) view.findViewById(R.id.card_title);
             date = (TextView) view.findViewById(R.id.card_date);
             date2 = (TextView) view.findViewById(R.id.card_date2);
@@ -32,11 +30,11 @@ public class IventListAdapter extends BaseAdapter {
 
     }
 
-    public IventListAdapter(Context context){
+    public EventListAdapter(Context context){
         this(context, new ArrayList<Event>());
     }
 
-    public IventListAdapter(Context context, ArrayList<Event> events){
+    public EventListAdapter(Context context, ArrayList<Event> events){
         this.context = context;
         this.events = events;
     }
@@ -60,8 +58,8 @@ public class IventListAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         Event event = this.events.get(i);
-        view = LayoutInflater.from(context).inflate(R.layout.news_merop, viewGroup, false);
-        IventListAdapter.IventItemHolder itemHolder = new IventListAdapter.IventItemHolder(view);
+        view = LayoutInflater.from(context).inflate(R.layout.holder_events_card, viewGroup, false);
+        EventListAdapter.EventItemHolder itemHolder = new EventListAdapter.EventItemHolder(view);
 
         itemHolder.title.setText(event.getName());
         itemHolder.date.setText(event.getDate_start_event());
