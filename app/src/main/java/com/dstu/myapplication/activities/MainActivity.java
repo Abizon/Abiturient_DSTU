@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import com.dstu.myapplication.Fragment1;
 import com.dstu.myapplication.Fragment_main;
 import com.dstu.myapplication.R;
+import com.dstu.myapplication.fragments.NewsListFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -79,7 +80,7 @@ public class MainActivity extends AppCompatActivity
 
                 break;
             case R.id.order:
-
+                fragment = new NewsListFragment();
                 break;
             case R.id.account:
                 fragment = new Fragment1();

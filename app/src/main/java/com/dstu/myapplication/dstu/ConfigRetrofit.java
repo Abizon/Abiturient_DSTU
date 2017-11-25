@@ -11,9 +11,9 @@ import retrofit.Retrofit;
 
 public class ConfigRetrofit {
     private static final String BASE_URL = "http://ec.donstu.ru/";
+    private  static Retrofit retrofit;
 
-    Retrofit retrofit;
-    public Retrofit getRetrofit(){
+    public static Retrofit getRetrofit(){
         if(retrofit==null)
             retrofit = new Retrofit.Builder().baseUrl(BASE_URL)
                     .client(new OkHttpClient())
