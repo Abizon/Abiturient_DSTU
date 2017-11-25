@@ -24,7 +24,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:background="@drawable/text_bloks"
-            android:text="Класс" />
+            android:hint="Класс" />
 
         <EditText
             android:id="@+id/editText"
@@ -36,7 +36,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:background="@drawable/text_bloks"
-            android:text="Учебное заведение" />
+            android:hint="Учебное заведение" />
 
         <EditText
             android:id="@+id/editText14"
@@ -48,7 +48,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:background="@drawable/text_bloks"
-            android:text="Желаемое направление" />
+            android:hint="Желаемое направление" />
 
         <View
             android:id="@+id/view"

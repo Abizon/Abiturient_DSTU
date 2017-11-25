@@ -24,7 +24,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:background="@drawable/text_bloks"
-            android:text="Номер Договора" />
+            android:hint="Номер Договора" />
 
         <EditText
             android:id="@+id/editText"
@@ -36,7 +36,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:background="@drawable/text_bloks"
-            android:text="Паспортные данные" />
+            android:hint="Паспортные данные" />
 
         <View
             android:id="@+id/view"

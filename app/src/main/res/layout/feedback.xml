@@ -17,7 +17,7 @@
         android:layout_marginLeft="58dp"
         android:layout_marginTop="58dp"
         android:background="@drawable/text_bloks"
-        android:text="ФИО" />
+        android:hint="ФИО" />
 
     <EditText
         android:id="@+id/editText8"
@@ -28,7 +28,7 @@
         android:layout_below="@+id/editText7"
         android:layout_marginTop="35dp"
         android:background="@drawable/text_bloks"
-        android:text="E-mail" />
+        android:hint="E-mail" />
 
     <EditText
         android:id="@+id/editText9"
@@ -39,7 +39,7 @@
         android:layout_below="@+id/editText8"
         android:layout_marginTop="37dp"
         android:background="@drawable/text_bloks"
-        android:text="Тема обращения" />
+        android:hint="Тема обращения" />
 
     <EditText
         android:id="@+id/editText11"
@@ -50,7 +50,7 @@
         android:layout_below="@+id/editText9"
         android:layout_marginTop="42dp"
         android:background="@drawable/text_bloks"
-        android:text="Текст обращения" />
+        android:hint="Текст обращения" />
 
     <EditText
         android:id="@+id/editText10"
@@ -61,7 +61,7 @@
         android:layout_below="@+id/editText11"
         android:layout_marginTop="42dp"
         android:background="@drawable/text_bloks"
-        android:text="Дата" />
+        android:hint="Дата" />
 
     <Button
         android:id="@+id/button"

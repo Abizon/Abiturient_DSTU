@@ -16,7 +16,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:background="@drawable/text_bloks"
-        android:text="Id пользователя"
+        android:hint="Id пользователя"
         android:textAlignment="center" />
 
     <EditText
@@ -28,7 +28,7 @@
         android:layout_below="@+id/editText3"
         android:layout_marginTop="44dp"
         android:background="@drawable/text_bloks"
-        android:text="Тема обращения"
+        android:hint="Тема обращения"
         android:textAlignment="center" />
 
     <EditText
@@ -40,7 +40,7 @@
         android:layout_below="@+id/editText4"
         android:layout_marginTop="36dp"
         android:background="@drawable/text_bloks"
-        android:text="Текст обращения"
+        android:hint="Текст обращения"
         android:textAlignment="center" />
 
     <EditText
@@ -51,7 +51,7 @@
         android:layout_alignStart="@+id/editText5"
         android:layout_centerVertical="true"
         android:background="@drawable/text_bloks"
-        android:text="Дата"
+        android:hint="Дата"
         android:textAlignment="center" />
 
     <Button
