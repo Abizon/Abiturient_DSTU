@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * Created by root on 25.11.2017.
  */
 
-public class Specialties {
+public class Specialty {
 
     @SerializedName("id") int id;
     @SerializedName("qualification_diplom") String qualification_diplom;
@@ -18,16 +18,16 @@ public class Specialties {
     @SerializedName("specilaty_title") String specilaty_title;
     @SerializedName("specilaty_code") String specilaty_code; //Код Специальности (к примеру 09.03.02)
     @SerializedName("training_from_title") String training_from_title; //Форма обучения (Очная, Заочная)
-    @SerializedName("children") ArrayList<Specialties> children;
-    
-    public class Array{
-        @SerializedName("array") ArrayList<Specialties> array;
+    @SerializedName("children") ArrayList<Specialty> children;
 
-        public ArrayList<Specialties> getArray() {
+    public class Array{
+        @SerializedName("array") ArrayList<Specialty> array;
+
+        public ArrayList<Specialty> getArray() {
             return array;
         }
 
-        public void setArray(ArrayList<Specialties> array) {
+        public void setArray(ArrayList<Specialty> array) {
             this.array = array;
         }
     }
@@ -96,11 +96,11 @@ public class Specialties {
         this.training_from_title = training_from_title;
     }
 
-    public ArrayList<Specialties> getChildren() {
+    public ArrayList<Specialty> getChildren() {
         return children;
     }
 
-    public void setChildren(ArrayList<Specialties> children) {
+    public void setChildren(ArrayList<Specialty> children) {
         this.children = children;
     }
 }
