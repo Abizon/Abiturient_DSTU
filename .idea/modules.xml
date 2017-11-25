@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Hackaton.iml" filepath="$PROJECT_DIR$/.idea/Hackaton.iml" />
-      <module fileurl="file://D:\AndroidStudioProject\hacaton\Hackaton\MyApplication2.iml" filepath="D:\AndroidStudioProject\hacaton\Hackaton\MyApplication2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DSTUHackaton.iml" filepath="$PROJECT_DIR$/DSTUHackaton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyApplication2.iml" filepath="$PROJECT_DIR$/MyApplication2.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://D:\AndroidStudioProject\hacaton\Hackaton\app\app.iml" filepath="D:\AndroidStudioProject\hacaton\Hackaton\app\app.iml" />
     </modules>
   </component>
 </project>

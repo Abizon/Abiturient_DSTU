@@ -1,12 +1,9 @@
-package com.dstu.myapplication;
+package com.dstu.myapplication.activities;
 
-import android.app.FragmentManager;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -14,6 +11,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.dstu.myapplication.Fragment1;
+import com.dstu.myapplication.Fragment_main;
+import com.dstu.myapplication.R;
+import com.dstu.myapplication.fragments.NewsListFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -37,8 +39,8 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         //переизбыток иконок в toolbare
-        Drawable drawable = ContextCompat.getDrawable(getApplicationContext(),R.drawable.ic_settings_black_18dp);
-        toolbar.setOverflowIcon(drawable);
+        //Drawable drawable = ContextCompat.getDrawable(getApplicationContext(),R.drawable.ic_settings_black_18dp);
+        //toolbar.setOverflowIcon(drawable);
 
         fragmentSelector(0);
 
@@ -78,7 +80,7 @@ public class MainActivity extends AppCompatActivity
 
                 break;
             case R.id.order:
-
+                fragment = new NewsListFragment();
                 break;
             case R.id.account:
                 fragment = new Fragment1();

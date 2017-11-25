@@ -15,8 +15,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="58dp"
-        android:layout_marginStart="58dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="58dp"
         android:text="ФИО" />
 
     <EditText
@@ -33,12 +32,10 @@
         android:id="@+id/editText9"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/editText8"
-        android:layout_alignRight="@+id/editText8"
+        android:layout_alignLeft="@+id/editText8"
+        android:layout_alignStart="@+id/editText8"
         android:layout_below="@+id/editText8"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="37dp"
         android:text="Тема обращения" />
 
     <EditText
@@ -63,8 +60,8 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
+        android:layout_width="135dp"
+        android:layout_height="30dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="52dp"
