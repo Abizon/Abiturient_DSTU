@@ -15,7 +15,10 @@ import android.view.MenuItem;
 import com.dstu.myapplication.Fragment1;
 import com.dstu.myapplication.Fragment_main;
 import com.dstu.myapplication.R;
+import com.dstu.myapplication.fragments.FeedbackFragment;
+import com.dstu.myapplication.fragments.IventFragment;
 import com.dstu.myapplication.fragments.NewsListFragment;
+import com.dstu.myapplication.fragments.TestFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -80,11 +83,23 @@ public class MainActivity extends AppCompatActivity
 
                 break;
             case R.id.order:
-                fragment = new NewsListFragment();
+                //
                 break;
             case R.id.account:
                 fragment = new Fragment1();
             break;
+            case R.id.nav_news:
+                fragment = new NewsListFragment();
+            break;
+            case R.id.nav_test:
+                fragment = new TestFragment();
+            break;
+            case R.id.nav_ivent:
+                fragment = new IventFragment();
+                break;
+            case R.id.nav_feedback:
+                fragment = new FeedbackFragment();
+                break;
         }
         ft.replace(R.id.fragment_container,fragment);
         ft.commit();
@@ -94,18 +109,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-
-        }
+        fragmentSelector(item.getItemId());
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
