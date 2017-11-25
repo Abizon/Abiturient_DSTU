@@ -72,8 +72,6 @@ public class NewsListAdapter extends BaseAdapter {
         itemHolder.date.setText(news.getTime_create());
         itemHolder.date2.setText(news.getTime_last_modify());
         itemHolder.text.setText(news.getDescription());
-        Toast.makeText(context,"Работает",Toast.LENGTH_SHORT).show();
-
 
         return view;
     }
