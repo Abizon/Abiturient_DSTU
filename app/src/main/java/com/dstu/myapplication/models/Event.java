@@ -4,10 +4,6 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 
-/**
- * Created by root on 25.11.2017.
- */
-
 public class Event {
     @SerializedName("id") int id;
     @SerializedName("name") String name;
