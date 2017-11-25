@@ -16,8 +16,10 @@ import com.dstu.myapplication.Fragment1;
 import com.dstu.myapplication.Fragment_main;
 import com.dstu.myapplication.R;
 import com.dstu.myapplication.fragments.FeedbackFragment;
-import com.dstu.myapplication.fragments.IventFragment;
+import com.dstu.myapplication.fragments.EventFragment;
 import com.dstu.myapplication.fragments.NewsListFragment;
+import com.dstu.myapplication.fragments.ProfileFragment;
+import com.dstu.myapplication.fragments.RegistrationFragment;
 import com.dstu.myapplication.fragments.TestFragment;
 
 public class MainActivity extends AppCompatActivity
@@ -73,7 +75,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void fragmentSelector(int id){
-        Fragment fragment = new Fragment_main();
+        Fragment fragment = new NewsListFragment();
         ft = getSupportFragmentManager().beginTransaction();
         switch (id){
             case R.id.action_settings:
@@ -86,7 +88,7 @@ public class MainActivity extends AppCompatActivity
                 //
                 break;
             case R.id.account:
-                fragment = new Fragment1();
+                fragment = new ProfileFragment();
             break;
             case R.id.nav_news:
                 fragment = new NewsListFragment();
@@ -95,11 +97,15 @@ public class MainActivity extends AppCompatActivity
                 fragment = new TestFragment();
             break;
             case R.id.nav_ivent:
-                fragment = new IventFragment();
+                fragment = new EventFragment();
                 break;
             case R.id.nav_feedback:
                 fragment = new FeedbackFragment();
                 break;
+            case R.id.nav_signup:
+                fragment = new RegistrationFragment();
+                break;
+
         }
         ft.replace(R.id.fragment_container,fragment);
         ft.commit();

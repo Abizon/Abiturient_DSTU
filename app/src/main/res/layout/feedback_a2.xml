@@ -46,7 +46,8 @@
         android:layout_marginBottom="5dp"
         android:layout_marginRight="10dp"
         android:clickable="true"
-        android:tint="@android:color/white" />
+        android:tint="@android:color/white"
+        app:backgroundTint="#FF5722" />
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
@@ -63,7 +64,8 @@
             android:layout_marginBottom="2dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:hint="введите сообщение" />
+            android:hint="введите сообщение"
+            android:background="@drawable/text_bloks"/>
     </android.support.design.widget.TextInputLayout>
 
     <ListView

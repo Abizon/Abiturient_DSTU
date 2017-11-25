@@ -16,8 +16,11 @@
             android:title="Мероприятия" />
         <item
             android:id="@+id/nav_feedback"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_feedback"
             android:title="Обратная связь" />
     </group>
-
+    <item
+        android:id="@+id/nav_signup"
+        android:icon="@drawable/ic_menu_share"
+        android:title="Регистрация" />
 </menu>

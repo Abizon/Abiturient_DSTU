@@ -9,8 +9,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="100dp">
+        android:layout_height="match_parent">
 
 
         <EditText
@@ -23,7 +22,8 @@
             android:layout_marginTop="29dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Класс" />
+            android:background="@drawable/text_bloks"
+            android:hint="Класс" />
 
         <EditText
             android:id="@+id/editText"
@@ -34,7 +34,8 @@
             android:layout_marginTop="56dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Учебное заведение" />
+            android:background="@drawable/text_bloks"
+            android:hint="Учебное заведение" />
 
         <EditText
             android:id="@+id/editText14"
@@ -45,26 +46,29 @@
             android:layout_marginTop="33dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Желаемое направление" />
+            android:background="@drawable/text_bloks"
+            android:hint="Желаемое направление" />
 
         <View
             android:id="@+id/view"
-            android:layout_width="fill_parent"
+            android:layout_width="250dp"
             android:layout_height="2dp"
-            android:layout_marginLeft="109dp"
-            android:layout_marginRight="109dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
             android:layout_marginTop="55dp"
             android:background="@android:color/background_dark" />
 
         <Button
             android:id="@+id/button6"
-            android:layout_width="100dp"
+            android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="17dp"
             android:background="@drawable/rounded_button3"
-            android:text="Далее" />
+            android:text="Далее"
+            android:textColor="@android:color/background_light" />
         <Button
             android:id="@+id/button3"
             android:layout_width="30dp"
@@ -75,7 +79,7 @@
             android:layout_marginRight="32dp"
             android:layout_toLeftOf="@+id/button4"
             android:layout_toStartOf="@+id/button4"
-            android:background="@drawable/rounded_button2" />
+            android:background="@drawable/circle_style" />
 
         <Button
             android:id="@+id/button2"
@@ -85,8 +89,6 @@
             android:layout_alignLeft="@+id/editText"
             android:layout_alignParentTop="true"
             android:layout_alignStart="@+id/editText"
-            android:layout_marginLeft="6dp"
-            android:layout_marginStart="6dp"
             android:layout_marginTop="42dp"
             android:background="@drawable/rounded_button" />
 
