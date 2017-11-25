@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "851307736014",
+    "firebase_url": "https://hacaton-dstu.firebaseio.com",
+    "project_id": "hacaton-dstu",
+    "storage_bucket": "hacaton-dstu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851307736014:android:d7446765724be5eb",
+        "android_client_info": {
+          "package_name": "com.dstu.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "851307736014-4gt2uk2930c8nrms8c6n17po4bgi7vnn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dstu.myapplication",
+            "certificate_hash": "cb20f8120efeaa3a0eac034f201452198f9609e2"
+          }
+        },
+        {
+          "client_id": "851307736014-cih1cumse7dls4mu8b7jvn8ujpsblghd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRvb1QfBJNF2iQcpWy_Zb_A1-euYBxkQQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "851307736014-cih1cumse7dls4mu8b7jvn8ujpsblghd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
