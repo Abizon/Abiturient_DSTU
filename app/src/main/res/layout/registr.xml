@@ -62,7 +62,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:background="@drawable/text_bloks"
-            android:text="Имя" />
+            android:hint="Имя" />
 
         <EditText
             android:id="@+id/editText"
