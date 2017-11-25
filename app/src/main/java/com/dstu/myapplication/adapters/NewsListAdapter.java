@@ -11,11 +11,11 @@ import com.dstu.myapplication.R;
 public class NewsListAdapter extends BaseAdapter {
 
     class NewsItemHolder{
-        TextView titele, date, text, author, date2;
+        TextView title, date, text, author, date2;
         ImageView cardIcon;
 
         public NewsItemHolder(View view){
-            titele = (TextView) view.findViewById(R.id.card_title);
+            title = (TextView) view.findViewById(R.id.card_title);
             date = (TextView) view.findViewById(R.id.card_date);
             date2 = (TextView) view.findViewById(R.id.card_date2);
             text = (TextView) view.findViewById(R.id.text);
