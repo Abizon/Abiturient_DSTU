@@ -60,10 +60,10 @@
         android:id="@+id/button"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
-        android:background="@drawable/button"
-        android:text="Отправить"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="109dp"
+        android:background="@drawable/button"
+        android:text="Отправить" />
 
 </RelativeLayout>
