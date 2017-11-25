@@ -18,6 +18,7 @@ import com.dstu.myapplication.R;
 import com.dstu.myapplication.fragments.FeedbackFragment;
 import com.dstu.myapplication.fragments.EventFragment;
 import com.dstu.myapplication.fragments.NewsListFragment;
+import com.dstu.myapplication.fragments.RegistrationFragment;
 import com.dstu.myapplication.fragments.TestFragment;
 
 public class MainActivity extends AppCompatActivity
@@ -100,6 +101,10 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_feedback:
                 fragment = new FeedbackFragment();
                 break;
+            case R.id.nav_signup:
+                fragment = new RegistrationFragment();
+                break;
+
         }
         ft.replace(R.id.fragment_container,fragment);
         ft.commit();
