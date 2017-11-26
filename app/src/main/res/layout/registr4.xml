@@ -54,7 +54,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="18dp"
             android:background="@drawable/rounded_button3"
-            android:text="Завершить" />
+            android:text="Завершить"
+            android:textColor="@android:color/background_light" />
 
         <Button
             android:id="@+id/button2"
@@ -99,7 +100,7 @@
             android:layout_above="@+id/editText"
             android:layout_alignEnd="@+id/editText"
             android:layout_alignRight="@+id/editText"
-            android:background="@drawable/rounded_button2" />
+            android:background="@drawable/circle_style" />
 
     </RelativeLayout>
 </RelativeLayout>
