@@ -23,6 +23,7 @@ public class ProfileFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.profile, container, false);
+        getActivity().setTitle("Личный кабинет");
 
         viewPager = (ViewPager) view.findViewById(R.id.container_pager);
         tabLayout = (TabLayout) view.findViewById(R.id.tabs);
