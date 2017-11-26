@@ -36,17 +36,6 @@
                  android:layout_marginLeft="10dp"
                  android:text="TextView" />-->
 
-            <View
-                android:id="@+id/view2"
-                android:layout_width="0dp"
-                android:layout_height="2dp"
-                android:background="#536DFE"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteY="154dp" />
-
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="85dp"
@@ -54,174 +43,156 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="28dp"
                 android:background="@drawable/text_bloks"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@mipmap/ic_launcher_round" />
 
-            <TextView
+            <EditText
                 android:id="@+id/textView7"
-                android:layout_width="250dp"
+                android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/imageView3"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
                 android:layout_toEndOf="@+id/imageView3"
                 android:layout_toRightOf="@+id/imageView3"
                 android:background="@drawable/text_bloks"
-                android:text="Фамилия"
+                android:hint="Фамилия"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.513"
                 app:layout_constraintStart_toEndOf="@+id/imageView3"
-                tools:layout_editor_absoluteY="8dp"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="MissingConstraints" />
 
-            <TextView
+            <EditText
                 android:id="@+id/textView13"
-                android:layout_width="250dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/textView12"
                 android:layout_alignStart="@+id/textView12"
                 android:layout_below="@+id/textView12"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/text_bloks"
-                android:text="Отчество"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                android:hint="Отчество"
+                app:layout_constraintEnd_toEndOf="@+id/textView7"
+                app:layout_constraintStart_toStartOf="@+id/textView7"
                 app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
-            <TextView
+            <EditText
                 android:id="@+id/textView14"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/imageView3"
                 android:layout_alignStart="@+id/imageView3"
                 android:layout_below="@+id/imageView3"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/text_bloks"
-                android:text="Дата рождения"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="169dp" />
+                android:hint="Дата рождения"
+                app:layout_constraintEnd_toEndOf="@+id/textView13"
+                app:layout_constraintHorizontal_bias="0.991"
+                app:layout_constraintStart_toStartOf="@+id/imageView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
-            <TextView
+            <EditText
                 android:id="@+id/textView15"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_alignLeft="@+id/textView14"
                 android:layout_alignStart="@+id/textView14"
                 android:layout_below="@+id/textView14"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
                 android:background="@drawable/text_bloks"
-                android:text="Учебное заведение"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
+                android:hint="Учебное заведение"
+                app:layout_constraintEnd_toEndOf="@+id/textView14"
+                app:layout_constraintStart_toStartOf="@+id/textView14"
                 app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
-            <TextView
+            <EditText
                 android:id="@+id/textView16"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/textView15"
                 android:layout_alignStart="@+id/textView15"
                 android:layout_below="@+id/textView15"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/text_bloks"
-                android:text="Класс"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                android:hint="Класс"
+                app:layout_constraintEnd_toEndOf="@+id/textView13"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/imageView3"
                 app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
-            <TextView
+            <EditText
                 android:id="@+id/textView17"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/textView16"
                 android:layout_alignStart="@+id/textView16"
                 android:layout_below="@+id/textView16"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/text_bloks"
-                android:text="Направление"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                android:hint="Направление"
+                app:layout_constraintEnd_toEndOf="@+id/textView13"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/imageView3"
                 app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
-            <TextView
+            <EditText
                 android:id="@+id/textView18"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/textView17"
                 android:layout_alignStart="@+id/textView17"
                 android:layout_below="@+id/textView17"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/text_bloks"
-                android:text="Телефон"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                android:hint="Телефон"
+                app:layout_constraintEnd_toEndOf="@+id/textView13"
+                app:layout_constraintStart_toStartOf="@+id/imageView3"
                 app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
-            <TextView
+            <EditText
                 android:id="@+id/textView19"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/textView18"
                 android:layout_alignStart="@+id/textView18"
                 android:layout_below="@+id/textView18"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/text_bloks"
-                android:text="Паспортные данные"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                android:hint="Паспортные данные"
+                app:layout_constraintEnd_toEndOf="@+id/textView13"
+                app:layout_constraintHorizontal_bias="0.444"
+                app:layout_constraintStart_toStartOf="@+id/imageView3"
                 app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
-            <TextView
+            <EditText
                 android:id="@+id/textView20"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/textView19"
                 android:layout_alignStart="@+id/textView19"
                 android:layout_below="@+id/textView19"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/text_bloks"
-                android:text="№ договора при участии в проектах"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                android:hint="№ договора при участии в проектах"
+                app:layout_constraintEnd_toEndOf="@+id/textView13"
+                app:layout_constraintStart_toStartOf="@+id/imageView3"
                 app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
-            <TextView
+            <EditText
                 android:id="@+id/textView12"
-                android:layout_width="250dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/textView7"
                 android:layout_alignStart="@+id/textView7"
                 android:layout_below="@+id/textView7"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/text_bloks"
-                android:text="Имя"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                android:hint="Имя"
+                app:layout_constraintEnd_toEndOf="@+id/textView7"
+                app:layout_constraintStart_toStartOf="@+id/textView7"
                 app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
         </android.support.constraint.ConstraintLayout>
