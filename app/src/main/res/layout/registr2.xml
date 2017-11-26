@@ -9,8 +9,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="100dp">
+        android:layout_height="match_parent">
 
 
         <EditText
@@ -52,10 +51,10 @@
 
         <View
             android:id="@+id/view"
-            android:layout_width="fill_parent"
+            android:layout_width="250dp"
             android:layout_height="2dp"
-            android:layout_marginLeft="109dp"
-            android:layout_marginRight="109dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
             android:layout_marginTop="55dp"
             android:background="@android:color/background_dark" />
 
@@ -88,8 +87,6 @@
             android:layout_alignLeft="@+id/editText"
             android:layout_alignParentTop="true"
             android:layout_alignStart="@+id/editText"
-            android:layout_marginLeft="6dp"
-            android:layout_marginStart="6dp"
             android:layout_marginTop="42dp"
             android:background="@drawable/rounded_button" />
 
