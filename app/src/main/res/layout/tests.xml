@@ -228,7 +228,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5">
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/checkBox10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -238,7 +238,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView5"
             tools:layout_editor_absoluteX="8dp" />
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/checkBox12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -248,7 +248,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView5"
             tools:layout_editor_absoluteX="225dp" />
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/checkBox11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -265,13 +265,11 @@
         android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
         android:layout_weight="1"
         android:background="@drawable/rounded_button3"
         android:text="Отправить результат"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup4" />
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>

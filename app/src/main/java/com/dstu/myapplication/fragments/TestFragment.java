@@ -18,6 +18,7 @@ public class TestFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.tests, container, false);
+        getActivity().setTitle("Тестирование");
         Button button = (Button) view.findViewById(R.id.button7);
         button.setOnClickListener(new View.OnClickListener() {
             @Override

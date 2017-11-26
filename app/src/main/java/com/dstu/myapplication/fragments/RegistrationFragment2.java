@@ -18,6 +18,7 @@ public class RegistrationFragment2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         
         View view = inflater.inflate(R.layout.registr2, container, false);
+        getActivity().setTitle("Регистрация");
         Button button = (Button)view.findViewById(R.id.button6);
         button.setOnClickListener(new View.OnClickListener() {
             @Override

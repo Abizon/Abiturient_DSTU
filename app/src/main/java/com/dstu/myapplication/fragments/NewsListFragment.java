@@ -27,6 +27,7 @@ public class NewsListFragment extends Fragment implements Callback<News.Array> {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
         recyclerView = (ListView) view.findViewById(R.id.rv);
+        getActivity().setTitle("Новости");
 
         Requests requests = ConfigRetrofit.getRetrofit().create(Requests.class);
         requests.getNews(0).enqueue(this);

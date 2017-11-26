@@ -26,6 +26,7 @@ public class EventFragment extends Fragment implements Callback<Event.Array> {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
         recyclerView = (ListView) view.findViewById(R.id.rv);
+        getActivity().setTitle("Мероприятия");
 
         Requests requests = ConfigRetrofit.getRetrofit().create(Requests.class);
         //requests.getNews(0).enqueue(this);
