@@ -53,7 +53,7 @@
             <EditText
                 android:id="@+id/textView7"
                 android:layout_width="220dp"
-                android:layout_height="35dp"
+                android:layout_height="39dp"
                 android:layout_alignTop="@+id/imageView3"
                 android:layout_marginEnd="8dp"
                 android:layout_marginTop="8dp"
@@ -65,9 +65,25 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
+                android:id="@+id/textView24"
+                android:layout_width="0dp"
+                android:layout_height="39dp"
+                android:layout_alignLeft="@+id/textView12"
+                android:layout_alignStart="@+id/textView12"
+                android:layout_below="@+id/textView12"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/text_bloks"
+                android:hint="Статус достижения"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+            <EditText
                 android:id="@+id/textView12"
                 android:layout_width="220dp"
-                android:layout_height="35dp"
+                android:layout_height="39dp"
                 android:layout_alignLeft="@+id/textView7"
                 android:layout_alignStart="@+id/textView7"
                 android:layout_below="@+id/textView7"
@@ -81,7 +97,7 @@
             <EditText
                 android:id="@+id/textView13"
                 android:layout_width="0dp"
-                android:layout_height="35dp"
+                android:layout_height="39dp"
                 android:layout_alignLeft="@+id/textView12"
                 android:layout_alignStart="@+id/textView12"
                 android:layout_below="@+id/textView12"
@@ -98,7 +114,7 @@
             <EditText
                 android:id="@+id/textView21"
                 android:layout_width="0dp"
-                android:layout_height="35dp"
+                android:layout_height="39dp"
                 android:layout_alignLeft="@+id/textView12"
                 android:layout_alignStart="@+id/textView12"
                 android:layout_below="@+id/textView12"
@@ -115,7 +131,7 @@
             <EditText
                 android:id="@+id/textView22"
                 android:layout_width="0dp"
-                android:layout_height="35dp"
+                android:layout_height="39dp"
                 android:layout_alignLeft="@+id/textView12"
                 android:layout_alignStart="@+id/textView12"
                 android:layout_below="@+id/textView12"
@@ -132,7 +148,7 @@
             <EditText
                 android:id="@+id/textView23"
                 android:layout_width="0dp"
-                android:layout_height="35dp"
+                android:layout_height="39dp"
                 android:layout_alignLeft="@+id/textView12"
                 android:layout_alignStart="@+id/textView12"
                 android:layout_below="@+id/textView12"
@@ -144,22 +160,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView22" />
-
-            <EditText
-                android:id="@+id/textView24"
-                android:layout_width="0dp"
-                android:layout_height="35dp"
-                android:layout_alignLeft="@+id/textView12"
-                android:layout_alignStart="@+id/textView12"
-                android:layout_below="@+id/textView12"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/text_bloks"
-                android:hint="Статус достижения"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
         </android.support.constraint.ConstraintLayout>
 

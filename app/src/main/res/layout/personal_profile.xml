@@ -53,7 +53,7 @@
             <EditText
                 android:id="@+id/textView7"
                 android:layout_width="220dp"
-                android:layout_height="35dp"
+                android:layout_height="39dp"
                 android:layout_alignTop="@+id/imageView3"
                 android:layout_marginEnd="8dp"
                 android:layout_marginTop="4dp"
@@ -68,7 +68,7 @@
             <EditText
                 android:id="@+id/textView13"
                 android:layout_width="0dp"
-                android:layout_height="35dp"
+                android:layout_height="39dp"
                 android:layout_alignLeft="@+id/textView12"
                 android:layout_alignStart="@+id/textView12"
                 android:layout_below="@+id/textView12"
@@ -82,7 +82,7 @@
             <EditText
                 android:id="@+id/textView14"
                 android:layout_width="0dp"
-                android:layout_height="35dp"
+                android:layout_height="39dp"
                 android:layout_alignLeft="@+id/imageView3"
                 android:layout_alignStart="@+id/imageView3"
                 android:layout_below="@+id/imageView3"
@@ -97,7 +97,7 @@
             <EditText
                 android:id="@+id/textView15"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="39dp"
                 android:layout_alignLeft="@+id/textView14"
                 android:layout_alignStart="@+id/textView14"
                 android:layout_below="@+id/textView14"
@@ -111,7 +111,7 @@
             <EditText
                 android:id="@+id/textView16"
                 android:layout_width="0dp"
-                android:layout_height="35dp"
+                android:layout_height="39dp"
                 android:layout_alignLeft="@+id/textView15"
                 android:layout_alignStart="@+id/textView15"
                 android:layout_below="@+id/textView15"
@@ -126,7 +126,7 @@
             <EditText
                 android:id="@+id/textView17"
                 android:layout_width="0dp"
-                android:layout_height="35dp"
+                android:layout_height="39dp"
                 android:layout_alignLeft="@+id/textView16"
                 android:layout_alignStart="@+id/textView16"
                 android:layout_below="@+id/textView16"
@@ -141,7 +141,7 @@
             <EditText
                 android:id="@+id/textView18"
                 android:layout_width="0dp"
-                android:layout_height="35dp"
+                android:layout_height="39dp"
                 android:layout_alignLeft="@+id/textView17"
                 android:layout_alignStart="@+id/textView17"
                 android:layout_below="@+id/textView17"
@@ -155,7 +155,7 @@
             <EditText
                 android:id="@+id/textView19"
                 android:layout_width="0dp"
-                android:layout_height="35dp"
+                android:layout_height="39dp"
                 android:layout_alignLeft="@+id/textView18"
                 android:layout_alignStart="@+id/textView18"
                 android:layout_below="@+id/textView18"
@@ -168,23 +168,9 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
             <EditText
-                android:id="@+id/textView20"
-                android:layout_width="0dp"
-                android:layout_height="35dp"
-                android:layout_alignLeft="@+id/textView19"
-                android:layout_alignStart="@+id/textView19"
-                android:layout_below="@+id/textView19"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/text_bloks"
-                android:hint="№ договора при участии в проектах"
-                app:layout_constraintEnd_toEndOf="@+id/textView13"
-                app:layout_constraintStart_toStartOf="@+id/imageView3"
-                app:layout_constraintTop_toBottomOf="@+id/textView19" />
-
-            <EditText
                 android:id="@+id/textView12"
                 android:layout_width="0dp"
-                android:layout_height="35dp"
+                android:layout_height="39dp"
                 android:layout_alignLeft="@+id/textView7"
                 android:layout_alignStart="@+id/textView7"
                 android:layout_below="@+id/textView7"
