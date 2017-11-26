@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void fragmentSelector(int id){
-        Fragment fragment = new Fragment_main();
+        Fragment fragment = new NewsListFragment();
         ft = getSupportFragmentManager().beginTransaction();
         switch (id){
             case R.id.action_settings:
