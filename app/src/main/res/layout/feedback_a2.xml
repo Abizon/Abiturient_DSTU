@@ -47,7 +47,7 @@
         android:layout_marginRight="10dp"
         android:clickable="true"
         android:tint="@android:color/white"
-        app:backgroundTint="#aff550" />
+        app:backgroundTint="#FF5722" />
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"

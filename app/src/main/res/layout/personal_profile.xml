@@ -40,12 +40,12 @@
                 android:id="@+id/view2"
                 android:layout_width="0dp"
                 android:layout_height="2dp"
-                android:background="@android:color/holo_orange_light"
+                android:background="#536DFE"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="154dp"
-                tools:ignore="MissingConstraints" />
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="154dp" />
 
             <ImageView
                 android:id="@+id/imageView3"
