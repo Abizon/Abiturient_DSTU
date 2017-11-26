@@ -2,6 +2,7 @@ package com.dstu.myapplication.adapters;
 
 
 import android.content.Context;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,10 +62,11 @@ public class EventListAdapter extends BaseAdapter {
         view = LayoutInflater.from(context).inflate(R.layout.holder_events_card, viewGroup, false);
         EventListAdapter.EventItemHolder itemHolder = new EventListAdapter.EventItemHolder(view);
 
+        String plain = Html.fromHtml(event.getDescription()).toString();
         itemHolder.title.setText(event.getName());
         itemHolder.date.setText(event.getDate_start_event());
         //itemHolder.date2.setText(news.getTime_last_modify());
-        itemHolder.text.setText(event.getDescription());
+        itemHolder.text.setText(plain.trim());
 
 
         return view;

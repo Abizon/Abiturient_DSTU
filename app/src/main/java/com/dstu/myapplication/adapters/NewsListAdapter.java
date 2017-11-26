@@ -73,7 +73,7 @@ public class NewsListAdapter extends BaseAdapter {
         itemHolder.title.setText(news.getTitle());
         itemHolder.date.setText(news.getTime_create());
         itemHolder.date2.setText(news.getTime_last_modify());
-        itemHolder.text.setText(plain);
+        itemHolder.text.setText(plain.trim());
 
         return view;
     }
