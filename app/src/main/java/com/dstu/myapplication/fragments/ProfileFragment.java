@@ -30,8 +30,8 @@ public class ProfileFragment extends Fragment {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getContext(), getActivity().getSupportFragmentManager());
         viewPager.setAdapter(adapter);
         //табы
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.profile_main).setIcon(R.drawable.ic_menu_camera));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.profile_2).setIcon(R.drawable.ic_menu_gallery));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.profile_main).setIcon(R.drawable.ic_person_pin_black_24dp));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.profile_2).setIcon(R.drawable.ic_archive_black_24dp));
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             //по нажатию шлем опредленный фрагмент
