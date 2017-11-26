@@ -8,4 +8,6 @@
     <string name="action_theme">Тема</string>
     <string name="action_order">Сортировка</string>
     <string name="action_account">Личный кабинет</string>
+    <string name="profile_main">Профиль</string>
+    <string name="profile_2">Достижения</string>
 </resources>

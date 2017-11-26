@@ -18,6 +18,7 @@ import com.dstu.myapplication.R;
 import com.dstu.myapplication.fragments.FeedbackFragment;
 import com.dstu.myapplication.fragments.EventFragment;
 import com.dstu.myapplication.fragments.NewsListFragment;
+import com.dstu.myapplication.fragments.ProfileFragment;
 import com.dstu.myapplication.fragments.RegistrationFragment;
 import com.dstu.myapplication.fragments.TestFragment;
 
@@ -87,7 +88,7 @@ public class MainActivity extends AppCompatActivity
                 //
                 break;
             case R.id.account:
-                fragment = new Fragment1();
+                fragment = new ProfileFragment();
             break;
             case R.id.nav_news:
                 fragment = new NewsListFragment();
