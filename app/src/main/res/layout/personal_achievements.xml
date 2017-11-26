@@ -48,7 +48,7 @@
                 android:background="@drawable/text_bloks"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@mipmap/ic_launcher_round" />
+                app:srcCompat="@drawable/logo3" />
 
             <EditText
                 android:id="@+id/textView7"

@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import com.dstu.myapplication.R;
 
-public class RegistrationFragment2 extends Fragment {
+public class RegistrationFragment2 extends Fragment implements View.OnClickListener{
 
     @Nullable
     @Override
@@ -19,14 +19,38 @@ public class RegistrationFragment2 extends Fragment {
         
         View view = inflater.inflate(R.layout.registr2, container, false);
         getActivity().setTitle("Регистрация");
-        Button button = (Button)view.findViewById(R.id.button6);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new RegistrationFragment3()).commit();
-            }
-        });
+        Button button2 = (Button)view.findViewById(R.id.button2);
+        Button button3 = (Button)view.findViewById(R.id.button3);
+        Button button4 = (Button)view.findViewById(R.id.button4);
+        Button button5 = (Button)view.findViewById(R.id.button5);
+        Button button6 = (Button)view.findViewById(R.id.button6);
+        button2.setOnClickListener(this);
+        button3.setOnClickListener(this);
+        button4.setOnClickListener(this);
+        button5.setOnClickListener(this);
+        button6.setOnClickListener(this);
 
         return view;
     }
+
+    @Override
+    public void onClick(View view) {
+            switch (view.getId()) {
+                case R.id.button2:
+                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new RegistrationFragment()).commit();
+                    break;
+                case R.id.button3:
+                    //getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new RegistrationFragment2()).commit();
+                    break;
+                case R.id.button4:
+                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new RegistrationFragment3()).commit();
+                    break;
+                case R.id.button5:
+                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new RegistrationFragment4()).commit();
+                    break;
+                case R.id.button6:
+                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new RegistrationFragment3()).commit();
+                    break;
+            }
+        }
 }
