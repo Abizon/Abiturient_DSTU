@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import com.dstu.myapplication.Fragment1;
 import com.dstu.myapplication.R;
 import com.dstu.myapplication.fragments.NewsListFragment;
+import com.dstu.myapplication.fragments.ProfileAchievementFragment;
 import com.dstu.myapplication.fragments.ProfileInformationFragment;
 
 
@@ -27,9 +28,8 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
             case 0:
                 return new ProfileInformationFragment();
             case 1:
-                //return new PracticeFragment_();
+                return new ProfileAchievementFragment();
             default:
-                //return new BooksFragment_();
                 return new NewsListFragment();
         }
     }
