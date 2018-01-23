@@ -54,4 +54,5 @@ public class DirectionsListFragment extends Fragment implements Callback<Special
     public void onFailure(Throwable t) {
 
     }
+
 }

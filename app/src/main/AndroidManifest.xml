@@ -28,6 +28,8 @@
         </activity>
         <activity android:name=".activities.PhoneAuthActivity"
                   android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.ProfileEditActivity"
+                  android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

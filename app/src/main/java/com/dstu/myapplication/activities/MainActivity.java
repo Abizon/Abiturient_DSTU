@@ -87,7 +87,6 @@ public class MainActivity extends AppCompatActivity
                 menu_main.getItem(1).setVisible(false);
                 menu_main.getItem(6).setVisible(true);
                 fragment = new ProfileFragment();
-                ft.addToBackStack("123");
 
             break;
             case R.id.nav_portfolio:
@@ -109,20 +108,19 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_signup:
                 startActivity(new Intent(MainActivity.this, PhoneAuthActivity.class));
                 finish();
-                //fragment = new RegistrationFragment();
                 break;
             case R.id.edit:
-                fragment = new ProfileEditFragment();
+                startActivity(new Intent(MainActivity.this,ProfileEditActivity.class));
                 menu_main.getItem(6).setVisible(false);
                 menu_main.getItem(5).setVisible(true);
                 break;
             case R.id.save:
-                getSupportFragmentManager().popBackStack();
                 menu_main.getItem(5).setVisible(false);
                 menu_main.getItem(6).setVisible(true);
                 break;
         }
         ft.replace(R.id.fragment_container,fragment);
+        ft.addToBackStack("MyStack");
         ft.commit();
     }
 
