@@ -10,4 +10,50 @@
     <string name="action_account">Личный кабинет</string>
     <string name="profile_main">Профиль</string>
     <string name="profile_2">Достижения</string>
+    <string name="view_profile_name">Имя</string>
+    <string name="view_profile_surname">Фамилия</string>
+    <string name="profile_email">Электронная почта</string>
+
+
+    <string name="label_phone_auth">Phone Number Authentication</string>
+    <string name="desc_phone_auth">Use a phone number to authenticate with Firebase.</string>
+
+    <string name="hint_user_id">User ID</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="signed_in">Signed In</string>
+    <string name="signed_out">Signed Out</string>
+    <string name="auth_failed">Authentication failed</string>
+    <string name="start_phone_auth">Start</string>
+    <string name="verify_phone_auth">Verify</string>
+    <string name="resend_phone_auth">Resend</string>
+    <string name="hint_phone_number">Телефон</string>
+    <string name="hint_verification_code">Код подтверждения</string>
+    <string name="status_code_sent">Код отправлен</string>
+    <string name="status_verification_failed">Verification failed</string>
+    <string name="status_verification_succeeded">Verification succeeded</string>
+    <string name="status_sign_in_failed">Sign-in failed</string>
+    <string name="instant_validation">(instant validation)</string>
+    <string name="desc_firebase_lockup">Firebase logo and name</string>
+
+    <string name="firebase_status_fmt">Firebase User: %s</string>
+    <string name="firebase_user_management">Firebase User Management</string>
+
+
+    <string name="phone_title_text">Phone Number</string>
+
+    <string name="firebaseui_status_fmt">Firebase User: %s</string>
+    <string name="firebaseui_title_text">FirebaseUI Auth</string>
+
+    <string name="view_profile_password">Пароль</string>
+    <string name="view_profile_verificationpassword">Подтверждение пароля</string>
+    <string name="view_profile_birthday">День рождения</string>
+    <string name="view_profile_school">Школа</string>
+    <string name="view_feedback_problem">Опишите вашу проблему</string>
+    <string name="view_feedback_theme">Тема обращения</string>
+    <string name="view_feedback_FIO">Ваши ФИО</string>
+    <string name="button_feedback">Отправить</string>
+    <string name="optionsmenu_search">Поиск</string>
+    <string name="optionsmenu_save">Сохранить</string>
+    <string name="optionsmenu_edit">Редактировать</string>
 </resources>

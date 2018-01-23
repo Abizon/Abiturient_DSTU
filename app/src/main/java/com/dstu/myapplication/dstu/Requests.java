@@ -10,7 +10,7 @@ import retrofit.http.GET;
 import retrofit.http.Path;
 
 public interface Requests {
-    @GET("/site/ci/api/training/getChildren") Call<Facultie.Answer> getFaculties();
+    @GET("/site/ci/api/training/getFaculties") Call<Facultie.Answer> getFaculties();
 
     @GET("/site/ci/api/training/getSpecialties/{id}") Call<Specialty.Array> getSpecialties(@Path("id") int ID);
 

@@ -4,20 +4,28 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_news"
-            android:icon="@drawable/ic_assessment_black_24dp"
-            android:title="Новости" />
-        <item
-            android:id="@+id/nav_test"
-            android:icon="@drawable/ic_chrome_reader_mode_black_24dp"
-            android:title="Тестирование" />
+            android:icon="@drawable/ic_class_black_24dp"
+            android:title="Новости ВУЗа" />
         <item
             android:id="@+id/nav_ivent"
-            android:icon="@drawable/ic_date_range_black_24dp"
-            android:title="Мероприятия" />
+            android:icon="@drawable/ic_event_note_black_24dp"
+            android:title="Объявления" />
+        <item
+            android:id="@+id/nav_directions"
+            android:icon="@drawable/ic_format_list_bulleted_black_24dp"
+            android:title="Специальности и направления" />
+        <item
+            android:id="@+id/nav_information"
+            android:icon="@drawable/ic_bookmark_black_24dp"
+            android:title="Информация для поступления" />
+        <item
+            android:id="@+id/nav_portfolio"
+            android:icon="@drawable/ic_folder_special_black_24dp"
+            android:title="Моё портфолио" />
         <item
             android:id="@+id/nav_feedback"
             android:icon="@drawable/ic_feedback_black_24dp"
-            android:title="Обратная связь" />
+            android:title="Задать вопрос" />
     </group>
     <item
         android:id="@+id/nav_signup"

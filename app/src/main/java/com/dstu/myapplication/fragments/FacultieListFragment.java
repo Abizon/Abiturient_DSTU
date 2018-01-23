@@ -9,42 +9,37 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.dstu.myapplication.R;
-import com.dstu.myapplication.adapters.NewsListAdapter;
+import com.dstu.myapplication.adapters.FacultieListAdapter;
 import com.dstu.myapplication.dstu.ConfigRetrofit;
 import com.dstu.myapplication.dstu.Requests;
-import com.dstu.myapplication.models.News;
+import com.dstu.myapplication.models.Facultie;
 
 import retrofit.Callback;
 import retrofit.Response;
 import retrofit.Retrofit;
 
-public class NewsListFragment extends Fragment implements Callback<News.Array> {
+
+public class FacultieListFragment extends Fragment implements Callback<Facultie.Answer>{
+
     ListView recyclerView;
-    NewsListAdapter newsListAdapter;
+    FacultieListAdapter facultieListAdapter;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
         recyclerView = (ListView) view.findViewById(R.id.rv);
-        getActivity().setTitle("Новости");
+        getActivity().setTitle("Факультеты");
 
         Requests requests = ConfigRetrofit.getRetrofit().create(Requests.class);
-        requests.getNews(0).enqueue(this);
-
-        /**
-         * TODO: Выгрузка информации о последних новостях из базы данных телефона в случае отсутствия интернета
-         */
+        requests.getFaculties().enqueue(this);
 
         return view;
     }
-
-
-
     @Override
-    public void onResponse(Response<News.Array> response, Retrofit retrofit) {
-        newsListAdapter = new NewsListAdapter(this.getContext(), response.body().getArray());
-        recyclerView.setAdapter(newsListAdapter);
+    public void onResponse(Response<Facultie.Answer> response, Retrofit retrofit) {
+        facultieListAdapter = new FacultieListAdapter(this.getContext(), response.body().getAnswer().get(0).getChildren());
+        recyclerView.setAdapter(facultieListAdapter);
     }
 
     @Override

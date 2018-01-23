@@ -16,13 +16,13 @@ import java.util.ArrayList;
 
 public class EventListAdapter extends BaseAdapter {
 
-    Context context;
-    ArrayList<Event> events;
+    private Context context;
+    private ArrayList<Event> events;
 
     class EventItemHolder{
         TextView title, date, text, date2;
 
-        public EventItemHolder(View view){
+        EventItemHolder(View view){
             title = (TextView) view.findViewById(R.id.card_title);
             date = (TextView) view.findViewById(R.id.card_date);
             date2 = (TextView) view.findViewById(R.id.card_date2);
@@ -65,7 +65,6 @@ public class EventListAdapter extends BaseAdapter {
         String plain = Html.fromHtml(event.getDescription()).toString();
         itemHolder.title.setText(event.getName());
         itemHolder.date.setText(event.getDate_start_event());
-        //itemHolder.date2.setText(news.getTime_last_modify());
         itemHolder.text.setText(plain.trim());
 
 

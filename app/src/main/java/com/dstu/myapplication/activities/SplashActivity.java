@@ -15,7 +15,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#FF5722"));
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#0079b2"));
         getSupportActionBar().setBackgroundDrawable(colorDrawable);
 
 

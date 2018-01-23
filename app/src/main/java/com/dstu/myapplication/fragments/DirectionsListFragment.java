@@ -9,42 +9,45 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.dstu.myapplication.R;
-import com.dstu.myapplication.adapters.NewsListAdapter;
+import com.dstu.myapplication.adapters.DirectionsListAdapter;
 import com.dstu.myapplication.dstu.ConfigRetrofit;
 import com.dstu.myapplication.dstu.Requests;
-import com.dstu.myapplication.models.News;
+import com.dstu.myapplication.models.Specialty;
 
 import retrofit.Callback;
 import retrofit.Response;
 import retrofit.Retrofit;
 
-public class NewsListFragment extends Fragment implements Callback<News.Array> {
+
+public class DirectionsListFragment extends Fragment implements Callback<Specialty.Array> {
+
     ListView recyclerView;
-    NewsListAdapter newsListAdapter;
+    DirectionsListAdapter directionsListAdapter;
+    int id;
+
+
+    public DirectionsListFragment(int a)
+    {
+        this.id=a;
+    }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
         recyclerView = (ListView) view.findViewById(R.id.rv);
-        getActivity().setTitle("Новости");
+        getActivity().setTitle("Направления");
 
         Requests requests = ConfigRetrofit.getRetrofit().create(Requests.class);
-        requests.getNews(0).enqueue(this);
-
-        /**
-         * TODO: Выгрузка информации о последних новостях из базы данных телефона в случае отсутствия интернета
-         */
+        requests.getSpecialties(id).enqueue(this);
 
         return view;
     }
 
-
-
     @Override
-    public void onResponse(Response<News.Array> response, Retrofit retrofit) {
-        newsListAdapter = new NewsListAdapter(this.getContext(), response.body().getArray());
-        recyclerView.setAdapter(newsListAdapter);
+    public void onResponse(Response<Specialty.Array> response, Retrofit retrofit) {
+        directionsListAdapter = new DirectionsListAdapter(this.getContext(), response.body().getArray());
+        recyclerView.setAdapter(directionsListAdapter);
     }
 
     @Override

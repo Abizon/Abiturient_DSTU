@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.dstu.myapplication.Fragment1;
 import com.dstu.myapplication.R;
 import com.dstu.myapplication.fragments.NewsListFragment;
 import com.dstu.myapplication.fragments.ProfileAchievementFragment;
@@ -13,7 +12,7 @@ import com.dstu.myapplication.fragments.ProfileInformationFragment;
 
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
-    public static final int items = 2;
+    private static final int items = 2;
 
     private Context mContext;
 

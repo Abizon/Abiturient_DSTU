@@ -2,6 +2,7 @@ package com.dstu.myapplication.models;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -9,7 +10,7 @@ public class Facultie {
     @SerializedName("id") int id;
     @SerializedName("name") String name;
     @SerializedName("parent_code") int parent_code;
-    @SerializedName("children") List<Facultie> children;
+    @SerializedName("children") ArrayList<Facultie> children;
 
 
     public class Answer {
@@ -50,11 +51,11 @@ public class Facultie {
         this.parent_code = parent_code;
     }
 
-    public List<Facultie> getChildren() {
+    public ArrayList<Facultie> getChildren() {
         return children;
     }
 
-    public void setChildren(List<Facultie> children) {
+    public void setChildren(ArrayList<Facultie> children) {
         this.children = children;
     }
 

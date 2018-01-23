@@ -1,5 +1,6 @@
 package com.dstu.myapplication.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -11,20 +12,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
-import com.dstu.myapplication.Fragment1;
-import com.dstu.myapplication.Fragment_main;
 import com.dstu.myapplication.R;
-import com.dstu.myapplication.fragments.FeedbackFragment;
+import com.dstu.myapplication.fragments.FacultieListFragment;
 import com.dstu.myapplication.fragments.EventFragment;
+import com.dstu.myapplication.fragments.FeedbackFragment;
 import com.dstu.myapplication.fragments.NewsListFragment;
+import com.dstu.myapplication.fragments.ProfileEditFragment;
 import com.dstu.myapplication.fragments.ProfileFragment;
-import com.dstu.myapplication.fragments.RegistrationFragment;
-import com.dstu.myapplication.fragments.TestFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     FragmentTransaction ft;
+    Menu menu_main;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +34,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -43,12 +44,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        //переизбыток иконок в toolbare
-        //Drawable drawable = ContextCompat.getDrawable(getApplicationContext(),R.drawable.ic_settings_black_18dp);
-        //toolbar.setOverflowIcon(drawable);
-
         fragmentSelector(0);
-
     }
 
     @Override
@@ -63,8 +59,8 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+        menu_main=menu;
         return true;
     }
 
@@ -88,24 +84,43 @@ public class MainActivity extends AppCompatActivity
                 //
                 break;
             case R.id.account:
+                menu_main.getItem(1).setVisible(false);
+                menu_main.getItem(6).setVisible(true);
                 fragment = new ProfileFragment();
+                ft.addToBackStack("123");
+
             break;
+            case R.id.nav_portfolio:
+                fragment = new ProfileFragment();
+                break;
             case R.id.nav_news:
                 fragment = new NewsListFragment();
             break;
-            case R.id.nav_test:
-                fragment = new TestFragment();
+            case R.id.nav_directions:
+                fragment = new FacultieListFragment();
             break;
             case R.id.nav_ivent:
                 fragment = new EventFragment();
+                menu_main.getItem(1).setVisible(false);
                 break;
             case R.id.nav_feedback:
                 fragment = new FeedbackFragment();
                 break;
             case R.id.nav_signup:
-                fragment = new RegistrationFragment();
+                startActivity(new Intent(MainActivity.this, PhoneAuthActivity.class));
+                finish();
+                //fragment = new RegistrationFragment();
                 break;
-
+            case R.id.edit:
+                fragment = new ProfileEditFragment();
+                menu_main.getItem(6).setVisible(false);
+                menu_main.getItem(5).setVisible(true);
+                break;
+            case R.id.save:
+                getSupportFragmentManager().popBackStack();
+                menu_main.getItem(5).setVisible(false);
+                menu_main.getItem(6).setVisible(true);
+                break;
         }
         ft.replace(R.id.fragment_container,fragment);
         ft.commit();
@@ -114,7 +129,6 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
         fragmentSelector(item.getItemId());
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
