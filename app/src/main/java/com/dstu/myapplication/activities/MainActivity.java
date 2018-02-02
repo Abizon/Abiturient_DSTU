@@ -1,6 +1,7 @@
 package com.dstu.myapplication.activities;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     FragmentTransaction ft;
     Menu menu_main;
+    Fragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,36 +73,36 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void fragmentSelector(int id){
-        Fragment fragment = new NewsListFragment();
         ft = getSupportFragmentManager().beginTransaction();
         switch (id){
             case R.id.action_settings:
 
                 break;
-            case R.id.theme:
-
-                break;
-            case R.id.order:
-                //
-                break;
             case R.id.account:
-                menu_main.getItem(1).setVisible(false);
-                menu_main.getItem(6).setVisible(true);
+                menu_main.getItem(2).setVisible(false);
+                menu_main.getItem(4).setVisible(true);
                 fragment = new ProfileFragment();
 
             break;
             case R.id.nav_portfolio:
+                menu_main.getItem(2).setVisible(true);
+                menu_main.getItem(4).setVisible(false);
                 fragment = new ProfileFragment();
                 break;
             case R.id.nav_news:
+                menu_main.getItem(2).setVisible(true);
+                menu_main.getItem(4).setVisible(false);
                 fragment = new NewsListFragment();
             break;
             case R.id.nav_directions:
+                menu_main.getItem(2).setVisible(true);
+                menu_main.getItem(4).setVisible(false);
                 fragment = new FacultieListFragment();
             break;
             case R.id.nav_ivent:
+                menu_main.getItem(2).setVisible(true);
+                menu_main.getItem(4).setVisible(false);
                 fragment = new EventFragment();
-                menu_main.getItem(1).setVisible(false);
                 break;
             case R.id.nav_feedback:
                 fragment = new FeedbackFragment();
@@ -111,16 +113,14 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.edit:
                 startActivity(new Intent(MainActivity.this,ProfileEditActivity.class));
-                menu_main.getItem(6).setVisible(false);
-                menu_main.getItem(5).setVisible(true);
+                menu_main.getItem(3).setVisible(false);
+                menu_main.getItem(4).setVisible(true);
                 break;
-            case R.id.save:
-                menu_main.getItem(5).setVisible(false);
-                menu_main.getItem(6).setVisible(true);
+            case 0:
+                fragment = new NewsListFragment();
                 break;
         }
         ft.replace(R.id.fragment_container,fragment);
-        ft.addToBackStack("MyStack");
         ft.commit();
     }
 

@@ -2,6 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/account"
+        android:orderInCategory="100"
+        android:title="@string/action_account"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"
@@ -12,21 +17,6 @@
         android:orderInCategory="100"
         app:showAsAction="ifRoom"
         android:title="@string/optionsmenu_search" />
-    <item
-        android:id="@+id/theme"
-        android:orderInCategory="100"
-        android:title="@string/action_theme"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/order"
-        android:orderInCategory="100"
-        android:title="@string/action_order"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/account"
-        android:orderInCategory="100"
-        android:title="@string/action_account"
-        app:showAsAction="never" />
     <item
         android:id="@+id/save"
         android:orderInCategory="100"
