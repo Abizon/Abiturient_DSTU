@@ -12,10 +12,14 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.dstu.myapplication.R;
+import com.dstu.myapplication.models.Abiturient;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class ProfileEditActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -39,7 +43,27 @@ public class ProfileEditActivity extends AppCompatActivity implements Navigation
         final EditText password = (EditText)findViewById(R.id.textView14);
         final EditText verificate_password = (EditText)findViewById(R.id.textView16);
         final EditText date = (EditText)findViewById(R.id.textView17);
+        final EditText city = (EditText) findViewById(R.id.editText3);
+        final EditText directions = (EditText) findViewById(R.id.editText4);
         final EditText school = (EditText)findViewById(R.id.textView18);
+        myRef.child("abiturients").child(user.getUid()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Abiturient abiturient = dataSnapshot.getValue(Abiturient.class);
+                name.setText(abiturient.getName());
+                surname.setText(abiturient.getSurname());
+                mail.setText(abiturient.getMail());
+                date.setText(abiturient.getDate());
+                city.setText(abiturient.getCity());
+                school.setText(abiturient.getSchool());
+                directions.setText(abiturient.getDirections());
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,7 +74,9 @@ public class ProfileEditActivity extends AppCompatActivity implements Navigation
                 myRef.child("abiturients").child(user.getUid()).child("password").setValue(password.getText().toString());
                 myRef.child("abiturients").child(user.getUid()).child("verificate_password").setValue(verificate_password.getText().toString());
                 myRef.child("abiturients").child(user.getUid()).child("date").setValue(date.getText().toString());
+                myRef.child("abiturients").child(user.getUid()).child("city").setValue(city.getText().toString());
                 myRef.child("abiturients").child(user.getUid()).child("school").setValue(school.getText().toString());
+                myRef.child("abiturients").child(user.getUid()).child("directions").setValue(directions.getText().toString());
                 Toast.makeText(ProfileEditActivity.this, "Данные сохранены", Toast.LENGTH_SHORT).show();
                 finish();
             }
