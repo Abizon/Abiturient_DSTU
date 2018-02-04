@@ -1,7 +1,7 @@
 package com.dstu.myapplication.activities;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -15,14 +15,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.dstu.myapplication.R;
-import com.dstu.myapplication.fragments.FacultieListFragment;
 import com.dstu.myapplication.fragments.EventFragment;
+import com.dstu.myapplication.fragments.FacultieListFragment;
 import com.dstu.myapplication.fragments.FeedbackFragment;
 import com.dstu.myapplication.fragments.NewsListFragment;
-import com.dstu.myapplication.fragments.ProfileEditFragment;
 import com.dstu.myapplication.fragments.ProfileFragment;
 import com.dstu.myapplication.models.Abiturient;
 import com.google.firebase.auth.FirebaseAuth;
@@ -39,6 +37,8 @@ public class MainActivity extends AppCompatActivity
     Menu menu_main;
     Fragment fragment;
     DatabaseReference myRef;
+    TextView nav_header_fi;
+    TextView nav_header_mail;
 
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -59,6 +59,8 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         fragmentSelector(0);
+        nav_header_fi =(TextView)findViewById(R.id.nav_header_fi);
+        nav_header_mail=(TextView)findViewById(R.id.nav_header_mail);
 
         updateNavHeader(navigationView.getHeaderView(0));
     }
@@ -99,7 +101,7 @@ public class MainActivity extends AppCompatActivity
 
             break;
             case R.id.nav_portfolio:
-                menu_main.getItem(2).setVisible(true);
+                menu_main.getItem(2).setVisible(false);
                 menu_main.getItem(4).setVisible(false);
                 fragment = new ProfileFragment();
                 break;
@@ -119,6 +121,8 @@ public class MainActivity extends AppCompatActivity
                 fragment = new EventFragment();
                 break;
             case R.id.nav_feedback:
+                menu_main.getItem(2).setVisible(false);
+                menu_main.getItem(4).setVisible(false);
                 fragment = new FeedbackFragment();
                 break;
             case R.id.nav_signup:
@@ -149,8 +153,10 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void updateNavHeader(View header_view){
-        final TextView nav_header_fi = (TextView)header_view.findViewById(R.id.nav_header_fi);
-        final TextView nav_header_mail = (TextView)header_view.findViewById(R.id.nav_header_mail);
+        if (Build.VERSION.SDK_INT >= 23){
+            nav_header_fi = (TextView)header_view.findViewById(R.id.nav_header_fi);
+            nav_header_mail = (TextView)header_view.findViewById(R.id.nav_header_mail);
+        }
         myRef = FirebaseDatabase.getInstance().getReference();
         myRef.child("abiturients").child(user.getUid()).addValueEventListener(new ValueEventListener() {
             @Override
