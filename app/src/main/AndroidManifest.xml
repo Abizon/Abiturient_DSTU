@@ -30,6 +30,8 @@
                   android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activities.ProfileEditActivity"
                   android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activities.DirectionsListActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

@@ -2,9 +2,6 @@ package com.dstu.myapplication.adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,9 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dstu.myapplication.R;
-import com.dstu.myapplication.activities.MainActivity;
-import com.dstu.myapplication.activities.SplashActivity;
-import com.dstu.myapplication.fragments.DirectionsListFragment;
+import com.dstu.myapplication.activities.DirectionsListActivity;
 import com.dstu.myapplication.models.Facultie;
 
 import java.util.ArrayList;
@@ -74,10 +69,10 @@ public class FacultieListAdapter extends BaseAdapter {
         itemHolder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment fragment = new DirectionsListFragment(faculties.get(i).getId());
-                ((FragmentActivity)context).getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragment_container, fragment)
-                        .commit();
+                Intent intent = new Intent(context, DirectionsListActivity.class);
+                intent.putExtra("id",faculties.get(i).getId());
+                intent.putExtra("name",faculties.get(i).getName());
+                context.startActivity(intent);
             }
         });
         return convertView;

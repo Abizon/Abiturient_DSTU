@@ -5,11 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dstu.myapplication.R;
-import com.dstu.myapplication.fragments.DirectionsListFragment;
 import com.dstu.myapplication.models.Specialty;
 
 import java.util.ArrayList;
@@ -20,8 +18,7 @@ public class DirectionsListAdapter extends BaseAdapter {
     private ArrayList<Specialty> directions;
 
     private class DirectionsItemHolder{
-        TextView title, date, text, author, date2;
-        ImageView cardIcon;
+        TextView title;
 
         DirectionsItemHolder(View view){
             title = (TextView) view.findViewById(R.id.textView32);
@@ -56,7 +53,7 @@ public class DirectionsListAdapter extends BaseAdapter {
         view = LayoutInflater.from(context).inflate(R.layout.faculties, viewGroup, false);
         DirectionsListAdapter.DirectionsItemHolder itemHolder = new DirectionsListAdapter.DirectionsItemHolder(view);
 
-        itemHolder.title.setText(directions.get(i).getSpecilaty_title());
+        itemHolder.title.setText(directions.get(i).getSpecilaty_code()+" "+directions.get(i).getSpecilaty_title()+" ("+directions.get(i).getTraining_from_title()+")");
 
         return view;
     }
