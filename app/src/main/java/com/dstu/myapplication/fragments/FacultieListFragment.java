@@ -14,12 +14,13 @@ import com.dstu.myapplication.dstu.ConfigRetrofit;
 import com.dstu.myapplication.dstu.Requests;
 import com.dstu.myapplication.models.Facultie;
 
-import retrofit.Callback;
-import retrofit.Response;
-import retrofit.Retrofit;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
 
 
-public class FacultieListFragment extends Fragment implements Callback<Facultie.Answer>{
+public class FacultieListFragment extends Fragment implements Callback<Facultie.Answer> {
 
     ListView recyclerView;
     FacultieListAdapter facultieListAdapter;
@@ -36,14 +37,15 @@ public class FacultieListFragment extends Fragment implements Callback<Facultie.
 
         return view;
     }
+
     @Override
-    public void onResponse(Response<Facultie.Answer> response, Retrofit retrofit) {
+    public void onResponse(Call<Facultie.Answer> call, Response<Facultie.Answer> response) {
         facultieListAdapter = new FacultieListAdapter(this.getContext(), response.body().getAnswer().get(0).getChildren());
         recyclerView.setAdapter(facultieListAdapter);
     }
 
     @Override
-    public void onFailure(Throwable t) {
+    public void onFailure(Call<Facultie.Answer> call, Throwable t) {
 
     }
 }

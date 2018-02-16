@@ -51,7 +51,7 @@ public class DirectionsListAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         view = LayoutInflater.from(context).inflate(R.layout.faculties, viewGroup, false);
-        DirectionsListAdapter.DirectionsItemHolder itemHolder = new DirectionsListAdapter.DirectionsItemHolder(view);
+        DirectionsItemHolder itemHolder = new DirectionsItemHolder(view);
 
         itemHolder.title.setText(directions.get(i).getSpecilaty_code()+" "+directions.get(i).getSpecilaty_title()+" ("+directions.get(i).getTraining_from_title()+")");
 

@@ -46,24 +46,26 @@ public class ProfileInformationFragment extends Fragment {
         phone = (TextView)view.findViewById(R.id.textView13);
         city = (TextView)view.findViewById(R.id.textView7);
         directions = (TextView)view.findViewById(R.id.textView18);
-        myRef.child("abiturients").child(user.getUid()).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                Abiturient abiturient = dataSnapshot.getValue(Abiturient.class);
-                fi.setText(abiturient.getName()+" "+abiturient.getSurname());
-                date.setText(abiturient.getDate());
-                email.setText(abiturient.getMail());
-                phone.setText(user.getPhoneNumber());
-                city.setText(abiturient.getCity());
-                school.setText(abiturient.getSchool());
-                directions.setText(abiturient.getDirections());
-            }
+        if(user!=null) {
+            myRef.child("abiturients").child(user.getUid()).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    Abiturient abiturient = dataSnapshot.getValue(Abiturient.class);
+                    fi.setText(abiturient.getName() + " " + abiturient.getSurname());
+                    date.setText(abiturient.getDate());
+                    email.setText(abiturient.getMail());
+                    phone.setText(user.getPhoneNumber());
+                    city.setText(abiturient.getCity());
+                    school.setText(abiturient.getSchool());
+                    directions.setText(abiturient.getDirections());
+                }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
 
-            }
-        });
+                }
+            });
+        }
 
         return view;
         }

@@ -14,9 +14,11 @@ import com.dstu.myapplication.dstu.ConfigRetrofit;
 import com.dstu.myapplication.dstu.Requests;
 import com.dstu.myapplication.models.News;
 
-import retrofit.Callback;
-import retrofit.Response;
-import retrofit.Retrofit;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+
 
 public class NewsListFragment extends Fragment implements Callback<News.Array> {
     ListView recyclerView;
@@ -39,16 +41,14 @@ public class NewsListFragment extends Fragment implements Callback<News.Array> {
         return view;
     }
 
-
-
     @Override
-    public void onResponse(Response<News.Array> response, Retrofit retrofit) {
+    public void onResponse(Call<News.Array> call, Response<News.Array> response) {
         newsListAdapter = new NewsListAdapter(this.getContext(), response.body().getArray());
         recyclerView.setAdapter(newsListAdapter);
     }
 
     @Override
-    public void onFailure(Throwable t) {
+    public void onFailure(Call<News.Array> call, Throwable t) {
 
     }
 }

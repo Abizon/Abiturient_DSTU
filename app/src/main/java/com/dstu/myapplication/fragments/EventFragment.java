@@ -14,9 +14,10 @@ import com.dstu.myapplication.dstu.ConfigRetrofit;
 import com.dstu.myapplication.dstu.Requests;
 import com.dstu.myapplication.models.Event;
 
-import retrofit.Callback;
-import retrofit.Response;
-import retrofit.Retrofit;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
 
 public class EventFragment extends Fragment implements Callback<Event.Array> {
     ListView recyclerView;
@@ -38,13 +39,15 @@ public class EventFragment extends Fragment implements Callback<Event.Array> {
 
         return view;
     }
+
     @Override
-    public void onResponse(Response<Event.Array> response, Retrofit retrofit) {
+    public void onResponse(Call<Event.Array> call, Response<Event.Array> response) {
         eventListAdapter = new EventListAdapter(this.getContext(), response.body().getEvents());
         recyclerView.setAdapter(eventListAdapter);
     }
 
     @Override
-    public void onFailure(Throwable t) {
+    public void onFailure(Call<Event.Array> call, Throwable t) {
+
     }
 }

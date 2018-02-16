@@ -16,9 +16,10 @@ import com.dstu.myapplication.dstu.ConfigRetrofit;
 import com.dstu.myapplication.dstu.Requests;
 import com.dstu.myapplication.models.Specialty;
 
-import retrofit.Callback;
-import retrofit.Response;
-import retrofit.Retrofit;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
 
 
 public class DirectionsListActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, Callback<Specialty.Array> {
@@ -50,17 +51,6 @@ public class DirectionsListActivity extends AppCompatActivity implements Navigat
     }
 
     @Override
-    public void onResponse(Response<Specialty.Array> response, Retrofit retrofit) {
-        directionsListAdapter = new DirectionsListAdapter(DirectionsListActivity.this, response.body().getArray());
-        recyclerView.setAdapter(directionsListAdapter);
-    }
-
-    @Override
-    public void onFailure(Throwable t) {
-
-    }
-
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == android.R.id.home)
@@ -71,9 +61,20 @@ public class DirectionsListActivity extends AppCompatActivity implements Navigat
     }
 
 
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         return false;
+    }
+
+    @Override
+    public void onResponse(Call<Specialty.Array> call, Response<Specialty.Array> response) {
+
+        directionsListAdapter = new DirectionsListAdapter(DirectionsListActivity.this, response.body().getArray());
+        recyclerView.setAdapter(directionsListAdapter);
+    }
+
+    @Override
+    public void onFailure(Call<Specialty.Array> call, Throwable t) {
+
     }
 }

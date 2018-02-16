@@ -158,18 +158,20 @@ public class MainActivity extends AppCompatActivity
             nav_header_mail = (TextView)header_view.findViewById(R.id.nav_header_mail);
         }
         myRef = FirebaseDatabase.getInstance().getReference();
-        myRef.child("abiturients").child(user.getUid()).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                Abiturient abiturient = dataSnapshot.getValue(Abiturient.class);
-                nav_header_fi.setText(abiturient.getName()+" "+abiturient.getSurname());
-                nav_header_mail.setText(abiturient.getMail());
-            }
+        if(user!=null) {
+            myRef.child("abiturients").child(user.getUid()).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    Abiturient abiturient = dataSnapshot.getValue(Abiturient.class);
+                    nav_header_fi.setText(abiturient.getName() + " " + abiturient.getSurname());
+                    nav_header_mail.setText(abiturient.getMail());
+                }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
 
-            }
-        });
+                }
+            });
+        }
     }
 }

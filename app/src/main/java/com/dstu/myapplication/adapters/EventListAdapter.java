@@ -60,7 +60,7 @@ public class EventListAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         Event event = this.events.get(i);
         view = LayoutInflater.from(context).inflate(R.layout.holder_events_card, viewGroup, false);
-        EventListAdapter.EventItemHolder itemHolder = new EventListAdapter.EventItemHolder(view);
+        EventItemHolder itemHolder = new EventItemHolder(view);
 
         String plain = Html.fromHtml(event.getDescription()).toString();
         itemHolder.title.setText(event.getName());

@@ -63,7 +63,7 @@ public class FacultieListAdapter extends BaseAdapter {
         }
 
 
-        final FacultieListAdapter.FacultieItemHolder itemHolder = new FacultieListAdapter.FacultieItemHolder(convertView);
+        final FacultieItemHolder itemHolder = new FacultieItemHolder(convertView);
 
         itemHolder.name.setText(faculties.get(i).getName());
         itemHolder.cardView.setOnClickListener(new View.OnClickListener() {
